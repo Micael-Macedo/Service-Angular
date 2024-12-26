@@ -1,0 +1,10 @@
+<h5>Compartilhando um serviço entre componentes</h5>
+
+<input type="text" #nomeCurso>
+<button (click)="onAddCurso(nomeCurso.value)">Add Curso</button>
+
+<ul>
+  @for (curso of cursos; track $index) {
+    <li>{{ curso }}</li>
+  }
+</ul>
