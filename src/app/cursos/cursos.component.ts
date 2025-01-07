@@ -16,6 +16,10 @@ export class CursosComponent {
   }
 
   ngOnInit() {
-    this.cursos = this.cursosService.getCursos();
+    // this.cursos = this.cursosService.getCursos();
+
+    this.cursosService.emitirCursoCriado.subscribe(
+      curso => console.log(curso)
+    )
   }
 }
